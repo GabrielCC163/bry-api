@@ -1,0 +1,522 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200721.193623.7133.0.001.json",
+    "dumpEventTime": "2020-07-21T19:36:23Z",
+    "dumpEventTimeStamp": "1595370983842",
+    "processId": 7133,
+    "cwd": "/home/gabrielbrum/Projetos/bry-challenge",
+    "commandLine": [
+      "/home/gabrielbrum/.nvm/versions/node/v12.14.1/bin/node",
+      "/home/gabrielbrum/Projetos/bry-challenge/node_modules/.bin/ts-node-dev",
+      "--ignore-watch",
+      "node_modules",
+      "src/server.ts"
+    ],
+    "nodejsVersion": "v12.14.1",
+    "glibcVersionRuntime": "2.27",
+    "glibcVersionCompiler": "2.17",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "linux",
+    "componentVersions": {
+      "node": "12.14.1",
+      "v8": "7.7.299.13-node.16",
+      "uv": "1.33.1",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.40.0",
+      "napi": "5",
+      "llhttp": "2.0.1",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.14.1/node-v12.14.1-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.14.1/node-v12.14.1.tar.gz"
+    },
+    "osName": "Linux",
+    "osRelease": "4.15.0-111-generic",
+    "osVersion": "#112-Ubuntu SMP Thu Jul 9 20:32:34 UTC 2020",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz",
+        "speed": 2582,
+        "user": 25327400,
+        "nice": 30000,
+        "sys": 6758600,
+        "idle": 361289600,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz",
+        "speed": 2956,
+        "user": 24593900,
+        "nice": 31300,
+        "sys": 7240600,
+        "idle": 360818100,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz",
+        "speed": 2903,
+        "user": 26983700,
+        "nice": 42700,
+        "sys": 6040800,
+        "idle": 358787100,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz",
+        "speed": 2806,
+        "user": 25903500,
+        "nice": 26100,
+        "sys": 6998800,
+        "idle": 360739900,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz",
+        "speed": 3231,
+        "user": 26441400,
+        "nice": 69300,
+        "sys": 6617200,
+        "idle": 359157000,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz",
+        "speed": 1931,
+        "user": 25222600,
+        "nice": 29500,
+        "sys": 6747300,
+        "idle": 361253400,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz",
+        "speed": 3189,
+        "user": 25614400,
+        "nice": 47700,
+        "sys": 6794800,
+        "idle": 354655000,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-7820HQ CPU @ 2.90GHz",
+        "speed": 3014,
+        "user": 25197200,
+        "nice": 31800,
+        "sys": 7026200,
+        "idle": 361209500,
+        "irq": 0
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "wlp1s0",
+        "internal": false,
+        "mac": "a0:c5:89:ee:b3:d0",
+        "address": "192.168.0.7",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "docker0",
+        "internal": false,
+        "mac": "02:42:19:ac:c6:2d",
+        "address": "172.17.0.1",
+        "netmask": "255.255.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "wlp1s0",
+        "internal": false,
+        "mac": "a0:c5:89:ee:b3:d0",
+        "address": "2804:14d:ba84:272c:d13b:6ad7:cb19:7b0",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "wlp1s0",
+        "internal": false,
+        "mac": "a0:c5:89:ee:b3:d0",
+        "address": "2804:14d:ba84:272c:7693:8a5b:706a:54b4",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "wlp1s0",
+        "internal": false,
+        "mac": "a0:c5:89:ee:b3:d0",
+        "address": "fe80::357f:5307:efe2:def5",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 3
+      },
+      {
+        "name": "docker0",
+        "internal": false,
+        "mac": "02:42:19:ac:c6:2d",
+        "address": "fe80::42:19ff:feac:c62d",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 4
+      },
+      {
+        "name": "veth9f1dd31",
+        "internal": false,
+        "mac": "ca:cc:10:68:57:5c",
+        "address": "fe80::c8cc:10ff:fe68:575c",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 84
+      }
+    ],
+    "host": "DOT303NB"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x0000000000b05ba5",
+      "symbol": "report::TriggerNodeReport(v8::Isolate*, node::Environment*, char const*, char const*, std::string const&, v8::Local<v8::String>) [/home/gabrielbrum/.nvm/versions/node/v12.14.1/bin/node]"
+    },
+    {
+      "pc": "0x00000000009dbd93",
+      "symbol": "node::OnFatalError(char const*, char const*) [/home/gabrielbrum/.nvm/versions/node/v12.14.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000b3b18e",
+      "symbol": "v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/home/gabrielbrum/.nvm/versions/node/v12.14.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000b3b509",
+      "symbol": "v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/home/gabrielbrum/.nvm/versions/node/v12.14.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000ce68a5",
+      "symbol": " [/home/gabrielbrum/.nvm/versions/node/v12.14.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000ce6f36",
+      "symbol": "v8::internal::Heap::RecomputeLimits(v8::internal::GarbageCollector) [/home/gabrielbrum/.nvm/versions/node/v12.14.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000cf2dca",
+      "symbol": "v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags) [/home/gabrielbrum/.nvm/versions/node/v12.14.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000cf3cd5",
+      "symbol": "v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/home/gabrielbrum/.nvm/versions/node/v12.14.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000cf66e8",
+      "symbol": "v8::internal::Heap::AllocateRawWithRetryOrFail(int, v8::internal::AllocationType, v8::internal::AllocationAlignment) [/home/gabrielbrum/.nvm/versions/node/v12.14.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000cbd017",
+      "symbol": "v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationType) [/home/gabrielbrum/.nvm/versions/node/v12.14.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000000ff307b",
+      "symbol": "v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [/home/gabrielbrum/.nvm/versions/node/v12.14.1/bin/node]"
+    },
+    {
+      "pc": "0x0000000001376259",
+      "symbol": " [/home/gabrielbrum/.nvm/versions/node/v12.14.1/bin/node]"
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2157711360,
+    "totalCommittedMemory": 2156071920,
+    "usedMemory": 2140282952,
+    "availableMemory": 53270240,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 32568,
+        "capacity": 261872,
+        "used": 32296,
+        "available": 229576
+      },
+      "new_space": {
+        "memorySize": 2097152,
+        "committedMemory": 1353248,
+        "capacity": 1047488,
+        "used": 368680,
+        "available": 678808
+      },
+      "old_space": {
+        "memorySize": 2045358080,
+        "committedMemory": 2045091032,
+        "capacity": 2042752816,
+        "used": 2031542384,
+        "available": 11210432
+      },
+      "code_space": {
+        "memorySize": 3309568,
+        "committedMemory": 3048608,
+        "capacity": 2608896,
+        "used": 2608896,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 1052672,
+        "committedMemory": 914720,
+        "capacity": 649520,
+        "used": 649520,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 105582592,
+        "committedMemory": 105582592,
+        "capacity": 105077624,
+        "used": 105077624,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 49152,
+        "committedMemory": 49152,
+        "capacity": 3552,
+        "used": 3552,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 1047488,
+        "used": 0,
+        "available": 1047488
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 171.1,
+    "kernelCpuSeconds": 13.5075,
+    "cpuConsumptionPercent": 11.8871,
+    "maxRss": 2720772096,
+    "pageFaults": {
+      "IORequired": 9,
+      "IONotRequired": 3132364
+    },
+    "fsActivity": {
+      "reads": 1904,
+      "writes": 2368
+    }
+  },
+  "uvthreadResourceUsage": {
+    "userCpuSeconds": 49.9818,
+    "kernelCpuSeconds": 10.8661,
+    "cpuConsumptionPercent": 3.91809,
+    "fsActivity": {
+      "reads": 1904,
+      "writes": 2368
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "USER": "gabrielbrum",
+    "LANGUAGE": "pt_BR:pt:en",
+    "npm_config_version_commit_hooks": "true",
+    "npm_config_user_agent": "yarn/1.21.1 npm/? node/v12.14.1 linux x64",
+    "TEXTDOMAIN": "im-config",
+    "XDG_SEAT": "seat0",
+    "npm_config_bin_links": "true",
+    "SSH_AGENT_PID": "4279",
+    "XDG_SESSION_TYPE": "x11",
+    "GIT_ASKPASS": "/usr/share/code/resources/app/extensions/git/dist/askpass.sh",
+    "npm_node_execpath": "/home/gabrielbrum/.nvm/versions/node/v12.14.1/bin/node",
+    "npm_config_init_version": "1.0.0",
+    "SHLVL": "2",
+    "npm_package_devDependencies__types_express": "^4.17.7",
+    "OLDPWD": "/home/gabrielbrum/Projetos/bry-challenge/src",
+    "CHROME_DESKTOP": "code-url-handler.desktop",
+    "QT4_IM_MODULE": "xim",
+    "HOME": "/home/gabrielbrum",
+    "DESKTOP_SESSION": "ubuntu",
+    "TERM_PROGRAM_VERSION": "1.47.0",
+    "NVM_BIN": "/home/gabrielbrum/.nvm/versions/node/v12.14.1/bin",
+    "NVM_INC": "/home/gabrielbrum/.nvm/versions/node/v12.14.1/include/node",
+    "npm_config_init_license": "MIT",
+    "GNOME_SHELL_SESSION_MODE": "ubuntu",
+    "APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL": "true",
+    "GTK_MODULES": "gail:atk-bridge",
+    "VSCODE_GIT_ASKPASS_MAIN": "/usr/share/code/resources/app/extensions/git/dist/askpass-main.js",
+    "YARN_WRAP_OUTPUT": "false",
+    "npm_config_version_tag_prefix": "v",
+    "VSCODE_GIT_ASKPASS_NODE": "/usr/share/code/code",
+    "DBUS_SESSION_BUS_ADDRESS": "unix:path=/run/user/1001/bus",
+    "COLORTERM": "truecolor",
+    "npm_package_description": "BRy Tecnologia - Desafio Back-end - API",
+    "NVM_DIR": "/home/gabrielbrum/.nvm",
+    "npm_package_readmeFilename": "README.md",
+    "MANDATORY_PATH": "/usr/share/gconf/ubuntu.mandatory.path",
+    "IM_CONFIG_PHASE": "2",
+    "npm_package_scripts_dev": "ts-node-dev --ignore-watch node_modules src/server.ts",
+    "LOGNAME": "gabrielbrum",
+    "GTK_IM_MODULE": "ibus",
+    "DESKTOP_AUTOSTART_ID": "1072981e3c2525a215953316822298700000041830007",
+    "_": "/usr/bin/yarn",
+    "npm_package_dependencies_express": "^4.17.1",
+    "DEFAULTS_PATH": "/usr/share/gconf/ubuntu.default.path",
+    "npm_package_devDependencies__types_cors": "^2.8.6",
+    "npm_config_registry": "https://registry.yarnpkg.com",
+    "USERNAME": "gabrielbrum",
+    "XDG_SESSION_ID": "3",
+    "TERM": "xterm-256color",
+    "LE_WORKING_DIR": "/etc/letsencrypt",
+    "GNOME_DESKTOP_SESSION_ID": "this-is-deprecated",
+    "npm_config_ignore_scripts": "",
+    "WINDOWPATH": "2",
+    "PATH": "/tmp/yarn--1595369430838-0.7186571908649879:/home/gabrielbrum/Projetos/bry-challenge/node_modules/.bin:/home/gabrielbrum/.config/yarn/link/node_modules/.bin:/home/gabrielbrum/.nvm/versions/node/v12.14.1/libexec/lib/node_modules/npm/bin/node-gyp-bin:/home/gabrielbrum/.nvm/versions/node/v12.14.1/lib/node_modules/npm/bin/node-gyp-bin:/home/gabrielbrum/.nvm/versions/node/v12.14.1/bin/node_modules/npm/bin/node-gyp-bin:/home/gabrielbrum/.genymotion:/home/gabrielbrum/bin:/home/gabrielbrum/.nvm/versions/node/v12.14.1/bin:/home/gabrielbrum/.genymotion:/home/gabrielbrum/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "NODE": "/home/gabrielbrum/.nvm/versions/node/v12.14.1/bin/node",
+    "SESSION_MANAGER": "local/DOT303NB:@/tmp/.ICE-unix/4183,unix/DOT303NB:/tmp/.ICE-unix/4183",
+    "npm_package_name": "bry-challenge",
+    "XDG_MENU_PREFIX": "gnome-",
+    "GNOME_TERMINAL_SCREEN": "/org/gnome/Terminal/screen/fad13c50_356f_45de_827a_49013b5a5c16",
+    "XDG_RUNTIME_DIR": "/run/user/1001",
+    "DISPLAY": ":0",
+    "LANG": "pt_BR.UTF-8",
+    "XDG_CURRENT_DESKTOP": "Unity",
+    "npm_package_devDependencies_ts_node_dev": "^1.0.0-pre.52",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "TERM_PROGRAM": "vscode",
+    "XDG_SESSION_DESKTOP": "ubuntu",
+    "XMODIFIERS": "@im=ibus",
+    "GNOME_TERMINAL_SERVICE": ":1.123",
+    "VSCODE_GIT_IPC_HANDLE": "/run/user/1001/vscode-git-16abdd700a.sock",
+    "XAUTHORITY": "/run/user/1001/gdm/Xauthority",
+    "npm_lifecycle_script": "ts-node-dev --ignore-watch node_modules src/server.ts",
+    "npm_package_devDependencies_dotenv": "^8.2.0",
+    "npm_package_dependencies_ts_node": "^8.10.2",
+    "npm_package_main": "index.js",
+    "ORIGINAL_XDG_CURRENT_DESKTOP": "ubuntu:GNOME",
+    "SSH_AUTH_SOCK": "/run/user/1001/keyring/ssh",
+    "npm_package_scripts_test": "echo \"Error: no test specified\" && exit 1",
+    "npm_config_version_git_message": "v%s",
+    "SHELL": "/bin/bash",
+    "npm_lifecycle_event": "dev",
+    "npm_package_dependencies_knex": "^0.21.2",
+    "npm_package_scripts_pg": "docker run --name docker-bry -e POSTGRES_PASSWORD=password -p 5432:5432 -v /storage/docker/postgresql-data:/var/lib/postgresql/data -d postgres",
+    "npm_package_version": "1.0.0",
+    "QT_ACCESSIBILITY": "1",
+    "GDMSESSION": "ubuntu",
+    "npm_config_argv": "{\"remain\":[],\"cooked\":[\"run\",\"dev\"],\"original\":[\"dev\"]}",
+    "npm_package_dependencies_cors": "^2.8.5",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "npm_package_scripts_knex_unmigrate": "knex --knexfile knexfile.ts migrate:down",
+    "npm_config_version_git_tag": "true",
+    "npm_config_version_git_sign": "",
+    "TEXTDOMAINDIR": "/usr/share/locale/",
+    "GPG_AGENT_INFO": "/run/user/1001/gnupg/S.gpg-agent:0:1",
+    "npm_package_license": "ISC",
+    "npm_config_strict_ssl": "true",
+    "XDG_VTNR": "2",
+    "QT_IM_MODULE": "ibus",
+    "PWD": "/home/gabrielbrum/Projetos/bry-challenge",
+    "npm_execpath": "/usr/share/yarn/bin/yarn.js",
+    "CLUTTER_IM_MODULE": "xim",
+    "NVM_CD_FLAGS": "",
+    "XDG_DATA_DIRS": "/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop",
+    "XDG_CONFIG_DIRS": "/etc/xdg/xdg-ubuntu:/etc/xdg",
+    "npm_package_author_name": "Gabriel Brum Rodrigues",
+    "npm_config_save_prefix": "^",
+    "npm_config_ignore_optional": "",
+    "VTE_VERSION": "5202",
+    "npm_package_dependencies_typescript": "^3.9.7",
+    "npm_package_scripts_knex_migrate": "knex --knexfile knexfile.ts migrate:latest",
+    "INIT_CWD": "/home/gabrielbrum/Projetos/bry-challenge",
+    "npm_package_dependencies_pg": "^8.3.0"
+  },
+  "userLimits": {
+    "core_file_size_blocks": {
+      "soft": 0,
+      "hard": "unlimited"
+    },
+    "data_seg_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_locked_memory_bytes": {
+      "soft": 16777216,
+      "hard": 16777216
+    },
+    "max_memory_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "open_files": {
+      "soft": 4096,
+      "hard": 4096
+    },
+    "stack_size_bytes": {
+      "soft": 8388608,
+      "hard": "unlimited"
+    },
+    "cpu_time_seconds": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_user_processes": {
+      "soft": 63334,
+      "hard": 63334
+    },
+    "virtual_memory_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    }
+  },
+  "sharedObjects": [
+    "linux-vdso.so.1",
+    "/lib/x86_64-linux-gnu/libdl.so.2",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6",
+    "/lib/x86_64-linux-gnu/libm.so.6",
+    "/lib/x86_64-linux-gnu/libgcc_s.so.1",
+    "/lib/x86_64-linux-gnu/libpthread.so.0",
+    "/lib/x86_64-linux-gnu/libc.so.6",
+    "/lib64/ld-linux-x86-64.so.2"
+  ]
+}
