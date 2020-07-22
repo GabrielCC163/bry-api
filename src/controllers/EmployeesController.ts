@@ -1,137 +1,118 @@
-import {Request, Response} from 'express';
+import { Request, Response } from 'express';
 import knex from '../database/connection';
 
 class EmployeesController {
-    async index(request: Request, response: Response) {
-        try {
-            const employees = await knex('funcionarios')
-                .select('*')
-                .orderBy('id', 'desc');
-    
-            const results = [];
+	async index(request: Request, response: Response) {
+		try {
+			const employees = await knex('funcionarios').select('*').orderBy('id', 'desc');
 
-            for (let employee of employees) {
-                const companies = await knex('funcionario_empresa as fe')
-                .join('empresas as e', 'e.id', '=', 'fe.idempresa')
-                .where('fe.idfuncionario', employee.id)
-                .select('e.*');
+			if (employees.length === 0) {
+				return response.status(400).send({ message: 'Nenhum funcionário cadastrado.' });
+			}
 
-                results.push({
-                    employee,
-                    companies
-                });
-            }
+			const results = [];
 
-            if (results.length === 0) {
-                return response.status(400).send({message: 'Nenhum funcionário cadastrado.'});   
-            }
+			for (let employee of employees) {
+				const companies = await knex('funcionario_empresa as fe')
+					.join('empresas as e', 'e.id', '=', 'fe.idempresa')
+					.where('fe.idfuncionario', employee.id)
+					.select('e.*');
 
-            return response.status(200).json(results);
-        } catch (err) {
-            return response.status(500).json({error: err.message});
-        }
-    };
+				results.push({
+					employee,
+					companies
+				});
+			}
 
-    async show(request: Request, response: Response) {
-        const {id} = request.params;
-        
-        try {
-            const employee = await knex('funcionarios')
-            .where('id', id)
-            .first();
-            console.log(employee);
-            
-            if (!employee) {
-                return response.status(400).send({message: 'Funcionário não encontrado.'});
-            }
-            
-            const companies = await knex('funcionario_empresa as fe')
-            .join('empresas as e', 'e.id', '=', 'fe.idempresa')
-            .where('fe.idfuncionario', employee.id)
-            .select('e.*');
-            
-            const result = {
-                employee,
-                companies
-            };
-            
-            return response.status(200).json(result);
-        }  catch (err) {
-            return response.status(500).json({error: err.message});
-        }
-    };
+			return response.status(200).json(results);
+		} catch (err) {
+			return response.status(500).json({ error: err.message });
+		}
+	}
 
-    async create(request: Request, response: Response) {
-        const {
-            nome,
-            cpf,
-            email,
-            endereco,
-        } = request.body;
+	async show(request: Request, response: Response) {
+		const { id } = request.params;
 
-        try {
-            const trx = await knex.transaction();
-            
-            const insertedEmployee = await trx('funcionarios').insert({nome, cpf, email, endereco}).returning('id');
-            
-            await trx.commit();
+		try {
+			const employee = await knex('funcionarios').where('id', id).first();
 
-            return response.status(200).json({id: insertedEmployee[0]});
-        }  catch (err) {
-            return response.status(500).json({error: err.message});
-        }
-    };
+			if (!employee) {
+				return response.status(400).send({ message: 'Funcionário não encontrado.' });
+			}
 
-    async update(request: Request, response: Response) {
-        const {
-            nome,
-            cpf,
-            email,
-            endereco,
-        } = request.body;
+			const companies = await knex('funcionario_empresa as fe')
+				.join('empresas as e', 'e.id', '=', 'fe.idempresa')
+				.where('fe.idfuncionario', employee.id)
+				.select('e.*');
 
-        const {id} = request.params;
-   
-        try {
-            const trx = await knex.transaction();
-            
-            const updatedEmployee = await trx('funcionarios')
-                .where('id', id)
-                .update({nome, cpf, email, endereco});
-            
-            if (!updatedEmployee) {
-                return response.status(400).send({message: 'Funcionário não encontrado.'});
-            }
+			const result = {
+				employee,
+				companies
+			};
 
-            await trx.commit();
+			return response.status(200).json(result);
+		} catch (err) {
+			return response.status(500).json({ error: err.message });
+		}
+	}
 
-            return response.status(200).send();
-        }  catch (err) {
-            return response.status(500).json({error: err.message});
-        }
-    }
+	async create(request: Request, response: Response) {
+		const { nome, cpf, email, endereco } = request.body;
 
-    async delete (request: Request, response: Response) {
-        const {id} = request.params;
-   
-        try {
-            const trx = await knex.transaction();
-            
-            const deletedEmployee = await trx('funcionarios')
-                .where('id', id)
-                .del();
-            
-            if (!deletedEmployee) {
-                return response.status(400).send({message: 'Funcionário não encontrado.'});
-            }
+		try {
+			const trx = await knex.transaction();
 
-            await trx.commit();
+			const insertedEmployee = await trx('funcionarios').insert({ nome, cpf, email, endereco }).returning('id');
 
-            return response.status(200).send();
-        }  catch (err) {
-            return response.status(500).json({error: err.message});
-        }
-    }
+			await trx.commit();
+
+			return response.status(200).json({ id: insertedEmployee[0] });
+		} catch (err) {
+			return response.status(500).json({ error: err.message });
+		}
+	}
+
+	async update(request: Request, response: Response) {
+		const { nome, cpf, email, endereco } = request.body;
+
+		const { id } = request.params;
+
+		try {
+			const trx = await knex.transaction();
+
+			const updatedEmployee = await trx('funcionarios').where('id', id).update({ nome, cpf, email, endereco });
+
+			if (!updatedEmployee) {
+				return response.status(400).send({ message: 'Funcionário não encontrado.' });
+			}
+
+			await trx.commit();
+
+			return response.status(200).send();
+		} catch (err) {
+			return response.status(500).json({ error: err.message });
+		}
+	}
+
+	async delete(request: Request, response: Response) {
+		const { id } = request.params;
+
+		try {
+			const trx = await knex.transaction();
+
+			const deletedEmployee = await trx('funcionarios').where('id', id).del();
+
+			if (!deletedEmployee) {
+				return response.status(400).send({ message: 'Funcionário não encontrado.' });
+			}
+
+			await trx.commit();
+
+			return response.status(200).send();
+		} catch (err) {
+			return response.status(500).json({ error: err.message });
+		}
+	}
 }
 
 export default EmployeesController;
