@@ -28,6 +28,10 @@ Node.js, TypeScript, Knex, PostgreSQL
     $ exit;
 
     ```
+    - Execute as migrations:
+    ```
+    $ yarn knex:migrate
+    ```
 
 * #### Inicialize a API
 ```
