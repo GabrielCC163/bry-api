@@ -15,7 +15,7 @@ Node.js, TypeScript, Knex, PostgreSQL
     ```
     - Inicialize o container do PostgreSQL:
     ```
-    $ docker run --name docker-bry -e POSTGRES_PASSWORD=password -v /storage/docker/postgresql-data:/var/lib/postgresql/data -d postgres
+    $ docker run --name docker-bry -e POSTGRES_PASSWORD=password -p 5432:5432 -v /storage/docker/postgresql-data:/var/lib/postgresql/data -d postgres
     ```
     - Acesse o container e, em seguida, o terminal do banco de dados para criar a base 'bry':
     ```
